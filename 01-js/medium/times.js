@@ -9,5 +9,19 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
+    let count=0;
+    var firstTime=new Date().getTime();
+    console.log(firstTime);
+    for(let i=0;i<n;i++){
+    count =count+i;
+    }
+    var secondTime =new Date().getTime();
+    console.log(secondTime);
+    var diff= secondTime-firstTime;
+    console.log("total time taken is : ",diff);
+
+    
     return 0.01;
 }
+
+calculateTime(1000000000);

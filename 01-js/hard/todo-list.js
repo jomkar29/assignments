@@ -12,6 +12,36 @@
 
 class Todo {
 
+  constructor(list=[]){
+this.list=list;
+  }
+  add(a){
+   let len=this.list.length;
+  this.list[len]=a;
+  console.log(this.list);
+  }
+  remove(a){
+    this.list.splice(a,1);
+  }
+  update(a,b){
+    if(a<this.list.length){
+    this.list[a]=b;}
+  
+  }
+  getAll(){
+    return this.list;
+  }
+  get(a){
+    if(a<this.list.length){
+  return this.list[a];
+    }else{
+      return null;
+    } 
+  }
+  clear(){
+    this.list.splice(0,this.list.length);
+  }
+
 }
 
 module.exports = Todo;

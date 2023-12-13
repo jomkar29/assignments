@@ -4,7 +4,18 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  let Str1= str.toUpperCase().replace(/[^A-Z0-9]+/ig, "");
+  let len =Str1.length-1;
+  let ispal=true;
+  for(i=0;i<str.length/2;i++){
+     if(!(Str1[i]===Str1[len])){
+       ispal=false;
+       console.log("Str1[i] " ,Str1[i]," i: ",i ," Str1[len] ",Str1[len]," len: ",len);
+     }
+     len=len-1;
+  }
+ return ispal;
 }
+
 
 module.exports = isPalindrome;
